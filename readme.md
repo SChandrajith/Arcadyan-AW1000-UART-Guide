@@ -103,6 +103,10 @@ Once connected successfully, you will have access to the CLI where you can:
 - **Username:** root
 - **Password:** password
 
+### 7. Video Tutorial
+
+https://github.com/user-attachments/assets/dc096887-1e22-495d-a85e-740d65105a72
+
 ## Troubleshooting
 
 - **Connect and power on device it will show output on terminal**
