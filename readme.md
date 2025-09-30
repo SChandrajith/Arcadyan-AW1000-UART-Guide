@@ -37,15 +37,32 @@ Connect your USB-to-serial adapter to the UART pins on the modem using the follo
 | RX          | TX        |
 | TX          | RX        |
 
+**Pinout Diagram:**
 ![connection diagram showing UART connections](images/pin-diagram.png)
 
+**Modem Connections:**
 ![connection in modem:](images/router-connections.jpg)
 
+**USB-to-Serial Adapter Connections:**
 ![connection in usb module:](images/uart-module.png)
 
 > **Note:** Cross the TX and RX connections - adapter RX connects to modem TX, and adapter TX connects to modem RX.
 
-### 2. Configure Terminal Software
+### 2. change network settings as following
+
+- IP Address: 192.168.1.2
+- Subnet Mask: 255.255.255.0
+- Default Gateway: 192.168.1.1
+
+**Network Settings Screenshot:**
+![network settings](images/network-settings.jpg)
+
+### 3. Download the content of the resource folder and install tftp server and then start it and select the resource folder
+
+**TFTP Server Settings Screenshot:**
+![tftp server settings](images/tftp.png)
+
+### 4. Configure Terminal Software
 
 Using **PuTTY** (or similar terminal emulator):
 
@@ -59,9 +76,7 @@ Using **PuTTY** (or similar terminal emulator):
    - **Parity:** None
    - **Flow Control:** None
 
-### 3.
-
-### 3. Access the Modem
+### 5. Access the Modem
 
 Once connected successfully, you will have access to the CLI where you can:
 
@@ -75,6 +90,18 @@ Once connected successfully, you will have access to the CLI where you can:
 | --------------- | ------ |
 | Arcadyan AW1000 | 115200 |
 
+### 6. Command list
+
+    - 1 tftpboot aw1000-mibib.bin
+    - 2 flash 0:MIBIB
+    - 3 tftpboot factory.bin
+    - 4 flash rootfs
+
+**Default Credentials:**
+
+- **Username:** root
+- **Password:** password
+
 ## Troubleshooting
 
 - **Connect and power on device it will show output on terminal**
@@ -84,7 +111,7 @@ Once connected successfully, you will have access to the CLI where you can:
 
 ## Safety Warning
 
-⚠️ **Warning:** Modifying firmware or settings via UART can brick your device if done incorrectly. Proceed with caution and ensure you have backups and recovery procedures in place.
+⚠️ **Warning:** Modifying firmware or settings via UART can brick your device if done incorrectly. Proceed with caution.
 
 ## License
 
