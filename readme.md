@@ -37,7 +37,11 @@ Connect your USB-to-serial adapter to the UART pins on the modem using the follo
 | RX          | TX        |
 | TX          | RX        |
 
-![UART Connection Diagram] (images/router-connections.jpg)
+![connection diagram showing UART connections](images/pin-diagram.png)
+
+![connection in modem:](images/router-connections.jpg)
+
+![connection in usb module:](images/uart-module.png)
 
 > **Note:** Cross the TX and RX connections - adapter RX connects to modem TX, and adapter TX connects to modem RX.
 
@@ -49,11 +53,13 @@ Using **PuTTY** (or similar terminal emulator):
 2. Configure the following settings:
    - **Connection Type:** Serial
    - **Serial Line:** COM port number (e.g., COM3)
-   - **Speed (Baud Rate):** 115200 (for Arcadyan AW1000)
+   - **Speed :** 115200
    - **Data Bits:** 8
    - **Stop Bits:** 1
    - **Parity:** None
    - **Flow Control:** None
+
+### 3.
 
 ### 3. Access the Modem
 
