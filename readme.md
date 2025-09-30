@@ -61,6 +61,7 @@ Connect your USB-to-serial adapter to the UART pins on the modem using the follo
 ### 3. Download the content of the resource folder and install tftp server and then start it and select the resource folder
 
 **TFTP Server Settings Screenshot:**
+
 ![tftp server settings](images/tftp.png)
 
 ### 4. Configure Terminal Software
