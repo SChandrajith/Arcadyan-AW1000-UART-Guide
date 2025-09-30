@@ -44,6 +44,7 @@ Connect your USB-to-serial adapter to the UART pins on the modem using the follo
 ![connection in modem:](images/router-connections.jpg)
 
 **USB-to-Serial Adapter Connections:**
+
 ![connection in usb module:](images/uart-module.png)
 
 > **Note:** Cross the TX and RX connections - adapter RX connects to modem TX, and adapter TX connects to modem RX.
@@ -71,10 +72,9 @@ Using **PuTTY** (or similar terminal emulator):
    - **Connection Type:** Serial
    - **Serial Line:** COM port number (e.g., COM3)
    - **Speed :** 115200
-   - **Data Bits:** 8
-   - **Stop Bits:** 1
-   - **Parity:** None
-   - **Flow Control:** None
+
+**PuTTY Configuration Screenshot:**
+![putty settings](images/putty.jpg)
 
 ### 5. Access the Modem
 
@@ -92,10 +92,10 @@ Once connected successfully, you will have access to the CLI where you can:
 
 ### 6. Command list
 
-    - 1 tftpboot aw1000-mibib.bin
-    - 2 flash 0:MIBIB
-    - 3 tftpboot factory.bin
-    - 4 flash rootfs
+    -  tftpboot aw1000-mibib.bin
+    -  flash 0:MIBIB
+    -  tftpboot factory.bin
+    -  flash rootfs
 
 **Default Credentials:**
 
